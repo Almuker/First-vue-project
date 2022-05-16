@@ -1,19 +1,20 @@
 <template>
   <div>
     <NavigationBar />
-
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <div class="container">
+      <SideBar />
+      <ContentBar />
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="js">
 import NavigationBar from '@/components/NavigationBar.vue'
+import SideBar from '@/components/SideBar.vue'
+import ContentBar from '@/components/ContentBar.vue'
+
 export default {
-  components: { NavigationBar }
+  components: { NavigationBar, SideBar, ContentBar }
 }
 </script>
 
@@ -22,5 +23,12 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  background-color: #222226;
+  height: 876px;
+  padding: 0 281px;
+  display: flex;
 }
 </style>

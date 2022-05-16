@@ -1,12 +1,11 @@
 <template>
   <div class="navigation">
     <div>
-      <span class="navigation-icon">Navigation bar</span>
+      <span class="navigation-icon">Progsus</span>
       <input type="text" class="navigation-input" placeholder="Поиск">
     </div>
     <div>
-      <button class="navigation-button">Регистрация</button>
-      <button class="navigation-button">Вход</button>
+      <button class="navigation-button">Войти</button>
     </div>
   </div>
 </template>
@@ -24,7 +23,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   background-color: #333336;
-  padding: 25px 300px;
+  padding: 10px 343px;
   color: #ffffff;
   font-size: 20px;
 }
@@ -38,11 +37,19 @@ export default {
   font-family: 'Roboto Serif', serif;
   font-size: 15px;
   padding: 0 5px;
+  border: 3px #333336 solid;
+  transition: 0.3s;
+}
+
+.navigation-input:hover,
+.navigation-input:focus {
+  border: 3px #0089D0 solid;
 }
 
 .navigation-icon {
   font-size: 25px;
   font-weight: 600;
+  letter-spacing: 4px;
 }
 
 .navigation-button {
