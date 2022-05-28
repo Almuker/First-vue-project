@@ -1,8 +1,14 @@
 <template>
   <div class="sidebar">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav class="sidebar-nav">
+      <ol>
+        <li>
+          <router-link to="/">Home page</router-link>
+        </li>
+        <li>
+          <router-link to="/about">About me</router-link>
+        </li>
+      </ol>
     </nav>
   </div>
 </template>
@@ -17,9 +23,32 @@ export default {
 .sidebar {
   width: 135px;
   margin-top: 15px;
-  background-color: #333336;
-  margin-right: 9px;
-  height: 250px;
+  margin-right: 13px;
+}
+
+.sidebar-nav {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 5px;
+}
+
+.sidebar-nav a{
+  color: #a5a5a5;
+  text-decoration: none;
+}
+
+ol {
+  list-style-type: none;
+}
+
+li {
+  margin: 5px 0;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+li:hover {
+  background-color: #444446;
   border-radius: 5px;
 }
 </style>

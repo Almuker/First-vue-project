@@ -1,11 +1,12 @@
 <template>
   <div class="navigation">
-    <div>
-      <span class="navigation-icon">Progsus</span>
-      <input type="text" class="navigation-input" placeholder="Поиск">
+    <div class="logo-block">
+        <img class="logo" src="https://png.pngtree.com/element_our/md/20180413/md_5ad0b7da9d41b.jpg" alt="">
+        <span class="navigation-logo">Progsus</span>
+        <input type="text" class="navigation-input" placeholder="Search">
     </div>
     <div>
-      <button class="navigation-button">Войти</button>
+        <button class="navigation-button">Войти</button>
     </div>
   </div>
 </template>
@@ -23,15 +24,15 @@ export default {
   align-items: center;
   justify-content: space-between;
   background-color: #333336;
-  padding: 10px 343px;
+  padding: 10px 352px;
   color: #ffffff;
   font-size: 20px;
 }
 
 .navigation-input {
-  margin-left: 15px;
+  margin-left: 5px;
   height: 35px;
-  width: 300px;
+  width: 305px;
   outline: none;
   border-radius: 5px;
   font-family: 'Roboto Serif', serif;
@@ -46,10 +47,10 @@ export default {
   border: 3px #0089D0 solid;
 }
 
-.navigation-icon {
+.navigation-logo {
   font-size: 25px;
   font-weight: 600;
-  letter-spacing: 4px;
+  margin-left: 5px;
 }
 
 .navigation-button {
@@ -67,5 +68,16 @@ export default {
 .navigation-button:hover {
   background-color: #0089D0;
   color: #ffffff;
+}
+
+.logo-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 50%;
 }
 </style>
