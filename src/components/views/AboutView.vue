@@ -26,20 +26,42 @@
               <td>KazNU</td>
             </tr>
           </table>
-          <button class="more-info-btn">Show more information</button>
+          <button class="more-info-btn" @click="toggleIsMore">Show more information</button>
         </div>
-        <div>
-          soon
+        <div v-if="isMoreInfo">
+          <table>
+            <tr>
+              <td>Contact information</td>
+              <td>___________________</td>
+            </tr>
+            <tr>
+              <td>Mobile phone:</td>
+              <td>87051111111</td>
+            </tr>
+            <tr>
+              <td>Home phone:</td>
+              <td>87052222222</td>
+            </tr>
+            <tr>
+              <td>Education</td>
+              <td>___________________</td>
+            </tr>
+            <tr>
+              <td>School:</td>
+              <td>№138</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  
-}
+<script setup>
+  import { ref } from 'vue'
+
+  let isMoreInfo = ref(false)
+  const toggleIsMore = () => {isMoreInfo.value = !isMoreInfo.value}
 </script>
 
 <style scoped>
@@ -53,6 +75,7 @@ export default {
   background-color: #333336;
   border-radius: 5px;
   width: 288px;
+  height: 400px;
 }
 
 .photo {
@@ -79,6 +102,7 @@ export default {
   background-color: #333336;
   width: 705px;
   border-radius: 5px;
+  height: fit-content;
 }
 
 .main-info-block {

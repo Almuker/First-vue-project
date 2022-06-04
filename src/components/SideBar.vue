@@ -2,10 +2,10 @@
   <div class="sidebar">
     <nav class="sidebar-nav">
       <ol>
-        <li>
+        <li :class="{'router-link-exact-active': $route.name === 'home'}">
           <router-link to="/">Home page</router-link>
         </li>
-        <li>
+        <li :class="{'router-link-exact-active': $route.name === 'about'}">
           <router-link to="/about">About me</router-link>
         </li>
       </ol>
@@ -47,8 +47,9 @@ li {
   transition: 0.5s;
 }
 
-li:hover {
+li:hover, .router-link-exact-active {
   background-color: #444446;
   border-radius: 5px;
 }
+
 </style>
