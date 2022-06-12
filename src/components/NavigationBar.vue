@@ -6,7 +6,7 @@
         <input type="text" class="navigation-input" placeholder="Search">
     </div>
     <div>
-        <button class="navigation-button">Войти</button>
+        <button class="navigation-button">Sign In</button>
     </div>
   </div>
 </template>

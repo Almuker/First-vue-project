@@ -8,6 +8,9 @@
         <li :class="{'router-link-exact-active': $route.name === 'about'}">
           <router-link to="/about">About me</router-link>
         </li>
+        <li :class="{'router-link-exact-active': $route.name === 'catalog'}">
+          <router-link to="/catalog">Catalog</router-link>
+        </li>
       </ol>
     </nav>
   </div>
