@@ -59,8 +59,7 @@
 
 <script setup>
   import { ref } from 'vue'
-
-  let isMoreInfo = ref(false)
+  const isMoreInfo = ref(false)
   const toggleIsMore = () => {isMoreInfo.value = !isMoreInfo.value}
 </script>
 

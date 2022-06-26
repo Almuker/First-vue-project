@@ -25,7 +25,7 @@ export default {
 <style>
 .sidebar {
   width: 135px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-right: 13px;
 }
 

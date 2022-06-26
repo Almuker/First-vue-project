@@ -27,7 +27,6 @@ export default {
 
 .container {
   background-color: #222226;
-  height: 876px;
   padding: 0 362px;
   display: flex;
 }
