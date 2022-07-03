@@ -9,17 +9,19 @@
     <p class="catalog-item-info">{{ props.product.price }}$</p>
     <button 
       class="catalog-item-button" 
-      @click="getArticle">Add to cart</button>
+      @click="addToCart">Add to cart</button>
   </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps } from 'vue'
+import { cartStore } from '@/store/cartStore';
+
+const cart = cartStore();
 
 const props = defineProps({product: Object})
-const emits = defineEmits(["sendDataToParent"])
-const getArticle = () => {
-  emits("sendDataToParent", props.product.article);
+const addToCart = () => {
+  cart.addToCart(props.product)
 }
 </script>
 

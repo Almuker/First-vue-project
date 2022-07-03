@@ -8,7 +8,6 @@
         v-for="product in store.products"
         :key="product.article"
         :product="product"
-        @sendDataToParent="sendDataToParent"
       />
     </div>
   </div>
@@ -16,26 +15,17 @@
 
 <script setup>
 import CatalogItem from '@/components/views/catalog/CatalogItem.vue'
-import { catalogStore } from '../../../store/catalogStore'
+import { catalogStore } from '@/store/catalogStore'
 import { onMounted } from 'vue';
-// import { computed } from '@vue/reactivity';
-
-const sendDataToParent = (data) => {
-  console.log(data);
-}
 
 const store = catalogStore();
-
-// const getProducts = computed(() => {
-//   return store.products
-// })
 
 onMounted(() => {
   store.fetchProduct();
 })
 </script>
 
-<style scoped>
+<style>
 .catalog {
   display: flex;
   flex-direction: column;

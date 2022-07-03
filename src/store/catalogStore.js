@@ -7,7 +7,7 @@ export const catalogStore = defineStore('products', {
   }),
   getters: {
     getProducts(state) {
-      return state.products;
+      return state.products
     }
   },
   actions: {
