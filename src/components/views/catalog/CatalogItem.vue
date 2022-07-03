@@ -6,7 +6,7 @@
       class="catalog-images">
     <p class="catalog-item-info">{{ props.product.name }}</p>
     <p class="catalog-item-info">{{ props.product.category }}</p>
-    <p class="catalog-item-info">{{ props.product.price }}</p>
+    <p class="catalog-item-info">{{ props.product.price }}$</p>
     <button 
       class="catalog-item-button" 
       @click="getArticle">Add to cart</button>

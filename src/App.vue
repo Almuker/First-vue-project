@@ -25,8 +25,11 @@ export default {
   padding: 0;
 }
 
-.container {
+body {
   background-color: #222226;
+}
+
+.container {
   padding: 0 362px;
   display: flex;
 }

@@ -12,7 +12,7 @@ import CartMain from '@/components/views/catalog/CartMain.vue';
 
 <style>
 .catalog-view {
-  background-color: #444446;
+  background-color: #333336;
   border-radius: 5px;
 }
 </style>

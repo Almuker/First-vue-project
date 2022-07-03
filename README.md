@@ -19,4 +19,5 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ### JSON Server
-json-server --watch db.json
+```
+use for axios json-server --watch db.json
