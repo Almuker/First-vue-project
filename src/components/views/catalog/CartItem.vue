@@ -8,11 +8,7 @@
     <div>
       <p>{{ cartProps.cart.name }}</p>
       <p>{{ cartProps.cart.price }}$</p>
-      <p>{{ cartProps.cart.article }}</p>
-    </div>
-    <div>
-      <p>Qty:</p>
-      <p>{{ cartProps.cart.quantity }}</p>
+      <p>Qty: {{ cartProps.cart.quantity }}</p>
     </div>
     <button 
       @click="deleteFromCart" 
@@ -22,6 +18,7 @@
 
 <script setup>
 import { defineProps, defineEmits } from 'vue'
+
 const cartProps = defineProps({cart: Object})
 
 const emits = defineEmits(["deleteFromCart"])
@@ -33,15 +30,13 @@ const deleteFromCart = () => {
 
 <style scoped>
 .cart-item {
-  width: 485px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
-  margin: 10px 5px;
   border: 1px solid #ffffff;
   border-radius: 5px;
-  padding: 10px;
+  margin: 15px;
 }
 
 .cart-images {
@@ -51,19 +46,21 @@ const deleteFromCart = () => {
 
 p {
   margin-top: 5px;
-  padding: 0 5px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .cart-item-button {
   border: none;
   border-radius: 5px;
   background-color: rgb(122, 122, 122);
+  font-family: 'Roboto Serif', serif;
+  font-weight: 600;
   color: #ffffff;
-  padding: 5px 10px;
+  padding: 8px 15px;
   font-size: 20px;
   cursor: pointer;
   transition: 0.3s;
+  margin: 15px;
 }
 
 .cart-item-button:hover {

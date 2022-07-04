@@ -25,7 +25,7 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .catalog {
   display: flex;
   flex-direction: column;
