@@ -12,10 +12,10 @@
 </template>
 
 <script setup>
-import CatalogMain from '@/components/views/catalog/CatalogMain.vue';
+import CatalogMain from '@/components/views/catalog/CatalogMain.vue'
 
-import { cartStore } from '@/store/cartStore';
-import { computed } from '@vue/reactivity';
+import { cartStore } from '@/store/cartStore'
+import { computed } from '@vue/reactivity'
 
 const store = cartStore()
 const cart = computed(() => {

@@ -7,7 +7,7 @@
     />
     <div>
       <p>{{ cartProps.cart.name }}</p>
-      <p>{{ cartProps.cart.price }}$</p>
+      <p>Price: {{ cartProps.cart.price }}$</p>
       <p>Qty: {{ cartProps.cart.quantity }}</p>
     </div>
     <button 

@@ -6,7 +6,7 @@
       class="catalog-images">
     <p class="catalog-item-info">{{ props.product.name }}</p>
     <p class="catalog-item-info">{{ props.product.category }}</p>
-    <p class="catalog-item-info">{{ props.product.price }}$</p>
+    <p class="catalog-item-info">Price: {{ props.product.price }}$</p>
     <button 
       class="catalog-item-button" 
       @click="addToCart">Add to cart</button>
@@ -15,9 +15,9 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import { cartStore } from '@/store/cartStore';
+import { cartStore } from '@/store/cartStore'
 
-const cart = cartStore();
+const cart = cartStore()
 
 const props = defineProps({product: Object})
 const addToCart = () => {

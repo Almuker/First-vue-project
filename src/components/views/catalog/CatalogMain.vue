@@ -16,12 +16,12 @@
 <script setup>
 import CatalogItem from '@/components/views/catalog/CatalogItem.vue'
 import { catalogStore } from '@/store/catalogStore'
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
-const store = catalogStore();
+const store = catalogStore()
 
 onMounted(() => {
-  store.fetchProduct();
+  store.fetchProduct()
 })
 </script>
 
