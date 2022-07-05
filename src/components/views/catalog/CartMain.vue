@@ -2,7 +2,7 @@
   <div>
     <div class="cart-info">
       <h1 v-if="!store.getCart.length">No products in cart</h1>
-      <h1 v-else>Products in cart - Total price:</h1>
+      <h1 v-else>Products in cart</h1>
     </div>
     <div class="cart-list">
       <CartItem 
@@ -10,6 +10,8 @@
         :key="item.article"
         :cart="item"
         @deleteFromCart="deleteFromCart(index)"
+        @incrementItem="incrementItem(index)"
+        @decrementItem="decrementItem(index)"
       />
     </div>
   </div>
@@ -23,6 +25,15 @@ const store = cartStore()
 const deleteFromCart = (index) => {
   store.deleteFromCart(index)
 }
+
+const incrementItem = (index) => {
+  store.incrementItem(index)
+}
+
+const decrementItem = (index) => {
+  store.decrementItem(index)
+}
+
 
 </script>
 

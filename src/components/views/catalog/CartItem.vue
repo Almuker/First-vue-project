@@ -8,7 +8,14 @@
     <div>
       <p>{{ cartProps.cart.name }}</p>
       <p>Price: {{ cartProps.cart.price }}$</p>
-      <p>Qty: {{ cartProps.cart.quantity }}</p>
+    </div>
+    <div>
+      <p>Qty:</p>
+      <span>
+        <span @click="incrementItem">+</span>
+          {{ cartProps.cart.quantity }}
+        <span @click="decrementItem">-</span>
+      </span>
     </div>
     <button 
       @click="deleteFromCart" 
@@ -20,11 +27,19 @@
 import { defineProps, defineEmits } from 'vue'
 
 const cartProps = defineProps({cart: Object})
-
-const emits = defineEmits(["deleteFromCart"])
+const emits = defineEmits(["deleteFromCart", "incrementItem", "decrementItem"])
 const deleteFromCart = () => {
-  emits("deleteFromCart");
+  emits("deleteFromCart")
 }
+
+const incrementItem = () => {
+  emits("incrementItem")
+}
+
+const decrementItem = () => {
+  emits("decrementItem")
+}
+
 
 </script> 
 
@@ -47,6 +62,11 @@ const deleteFromCart = () => {
 p {
   margin-top: 5px;
   font-size: 20px;
+  padding-bottom: 5px;
+}
+
+span {
+  cursor: pointer;
 }
 
 .cart-item-button {

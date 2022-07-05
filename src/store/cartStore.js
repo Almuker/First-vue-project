@@ -31,6 +31,12 @@ export const cartStore = defineStore('cart', {
     },
     deleteFromCart(index) {
       this.cart.splice(index, 1)
+    },
+    incrementItem(index) {
+      this.cart[index].quantity++
+    },
+    decrementItem(index) {
+      if (this.cart[index].quantity > 0) this.cart[index].quantity--
     }
   }
 })
