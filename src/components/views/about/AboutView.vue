@@ -26,7 +26,10 @@
               <td>KazNU</td>
             </tr>
           </table>
-          <button class="more-info-btn" @click="toggleIsMore">Show more information</button>
+          <button 
+            class="more-info-btn" 
+            @click="isMoreInfo = !isMoreInfo"
+          >Show more information</button>
         </div>
         <div v-if="isMoreInfo">
           <table>
@@ -61,7 +64,6 @@
 import { ref } from 'vue'
 
 const isMoreInfo = ref(false)
-const toggleIsMore = () => {isMoreInfo.value = !isMoreInfo.value}
 </script>
 
 <style scoped>

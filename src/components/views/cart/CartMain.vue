@@ -4,7 +4,10 @@
       <p>Total price in cart: {{ cartTotal }}$</p>
     </div>
     <div class="cart-list">
-      <p v-if="!store.getCart.length" class="cart-info">No product in cart</p>
+      <p 
+        v-if="!store.getCart.length" 
+        class="cart-info"
+        >No product in cart</p>
       <CartItem 
         v-for="(item, index) in store.getCart"
         :key="item.article"
