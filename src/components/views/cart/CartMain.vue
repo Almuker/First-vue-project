@@ -4,6 +4,7 @@
       <p>Total price in cart: {{ cartTotal }}$</p>
     </div>
     <div class="cart-list">
+      <p v-if="!store.getCart.length" class="cart-info">No product in cart</p>
       <CartItem 
         v-for="(item, index) in store.getCart"
         :key="item.article"
@@ -48,15 +49,14 @@ const decrementItem = (index) => {
 <style scoped>
 .cart-info {
   background-color: #333336;
-  padding-top: 5px;
   color: #ffffff;
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 600;
+  padding-top: 10px;
 }
 .cart-list {
-    background-color: #333336;
+  background-color: #333336;
   display: flex;
   flex-wrap: wrap;
   color: #ffffff;
