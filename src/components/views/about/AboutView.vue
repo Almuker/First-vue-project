@@ -58,9 +58,10 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-  const isMoreInfo = ref(false)
-  const toggleIsMore = () => {isMoreInfo.value = !isMoreInfo.value}
+import { ref } from 'vue'
+
+const isMoreInfo = ref(false)
+const toggleIsMore = () => {isMoreInfo.value = !isMoreInfo.value}
 </script>
 
 <style scoped>

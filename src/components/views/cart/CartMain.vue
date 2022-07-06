@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import CartItem from "./CartItem"
+import CartItem from './CartItem'
 import { cartStore } from '@/store/cartStore'
 import { computed } from '@vue/reactivity'
 

@@ -1,12 +1,12 @@
 <template>
   <div class="navigation">
     <div class="logo-block">
-        <img class="logo" src="https://png.pngtree.com/element_our/md/20180413/md_5ad0b7da9d41b.jpg" alt="">
-        <span class="navigation-logo">Progsus</span>
-        <input type="text" class="navigation-input" placeholder="Search">
+      <img class="logo" src="https://png.pngtree.com/element_our/md/20180413/md_5ad0b7da9d41b.jpg" alt="">
+      <span class="navigation-logo">Progsus</span>
+      <input type="text" class="navigation-input" placeholder="Search">
     </div>
     <div>
-        <button class="navigation-button">Sign In</button>
+      <button class="navigation-button">Sign In</button>
     </div>
   </div>
 </template>

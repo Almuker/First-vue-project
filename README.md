@@ -1,5 +1,4 @@
 # vue_first_project
-
 ## Project setup
 ```
 npm install
@@ -16,8 +15,6 @@ npm run build
 ```
 npm run lint
 ```
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 ### JSON Server
 ```
 use for axios json-server --watch db.json
