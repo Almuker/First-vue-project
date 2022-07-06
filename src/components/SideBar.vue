@@ -11,15 +11,25 @@
         <li :class="{'router-link-exact-active': $route.name === 'catalog'}">
           <router-link to="/catalog">Catalog</router-link>
         </li>
+        <li :class="{'router-link-exact-active': $route.name === 'cart'}">
+          <router-link to="/cart">Cart: {{ cart.length }}</router-link>
+        </li>
       </ol>
     </nav>
   </div>
 </template>
 
 <script setup>
+import { cartStore } from '@/store/cartStore'
+import { computed } from '@vue/reactivity'
+
+const store = cartStore()
+const cart = computed(() => {
+  return store.cart
+})
 </script>
 
-<style>
+<style scoped>
 .sidebar {
   width: 135px;
   margin-top: 5px;

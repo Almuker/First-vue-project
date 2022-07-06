@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="cart-info">
-      <h1 v-if="!store.getCart.length">No products in cart</h1>
-      <h1 v-else>Products in cart</h1>
+     <div class="cart-total-price">
+      <p>Total price in cart: {{ cartTotal }}$</p>
     </div>
     <div class="cart-list">
       <CartItem 
@@ -20,8 +19,17 @@
 <script setup>
 import CartItem from "./CartItem"
 import { cartStore } from '@/store/cartStore'
+import { computed } from '@vue/reactivity'
 
 const store = cartStore()
+const cartTotal = computed(() => {
+  let result = []
+  for (let item of store.getCart) {
+    result.push(item.price * item.quantity)
+  }
+  return result = result.reduce((sum, el) => sum + el, 0)
+})
+
 const deleteFromCart = (index) => {
   store.deleteFromCart(index)
 }
@@ -55,5 +63,16 @@ const decrementItem = (index) => {
   justify-content: center;
   padding-bottom: 15px;
   border-radius: 5px;
+}
+
+.cart-total-price {
+  background-color: #333336;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 600;
 }
 </style>
