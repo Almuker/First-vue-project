@@ -17,6 +17,7 @@ import { defineProps, ref, defineEmits } from 'vue'
 
 const optionProps = defineProps({options: Array})
 const emits = defineEmits(["select"])
+
 const areOptionsVisible = ref(false)
 
 const selectOption = (option) => {

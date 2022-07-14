@@ -14,7 +14,7 @@
 import { ref } from 'vue';
 import CustomSelect from './CustomSelect';
 
-const selected = ref()
+const selected = ref('')
 const options = [
   {name: 'Option 1', value: 1},
   {name: 'Option 2', value: 2},
@@ -23,7 +23,6 @@ const options = [
   {name: 'Option 5', value: 5},
   {name: 'Option 6', value: 6},
 ]
-
 
 const optionSelect = (option) => {
   selected.value = option.name
